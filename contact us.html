@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title> mimmi</title>
+        <link href="Style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Testing Method</h1>
+           
+            
+            <form action="https://sheetdb.io/api/v1/2h75igtzr46gb" method="post" id="sheetdb-form">
+              <div class="container">
+                <h1>contact us</h1>
+              
+                <hr>
+            
+                <label for="email"><b>Full Name </b></label>
+                <input type="text" placeholder="name infull" name="data[name]" required>
+            
+
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="data[email]" required>
+            
+                <label for="psw"><b>subject</b></label>
+                <input type="text" placeholder="subject" name="data[subject]" required>
+            
+                <label for="psw-repeat"><b>message</b></label>
+                <input type="text" placeholder="message" name="data[message]" required>
+            
+             
+            
+                <p>Waheed Demo</a>.</p>
+            
+                <div class="clearfix">
+                  <button type="button" class="cancelbtn">Cancel</button>
+                  <button type="submit" class="signupbtn">Sign Up</button>
+                </div>
+              </div>
+            </form> 
+
+          </div>
+          <script>
+            var form = document.getElementById('sheetdb-form');
+        form.addEventListener("submit", e => {
+          e.preventDefault();
+          fetch(form.action, {
+              method : "POST",
+              body: new FormData(document.getElementById("sheetdb-form")),
+          }).then(
+              response => response.json()
+          ).then((html) => {
+            // you can put any JS code here
+            window.open('page2.html', '_blank');
+
+          });
+        });
+          </script>
+    </body>
+</html>
+
